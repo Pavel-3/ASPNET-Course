@@ -15,21 +15,10 @@ namespace EntityFrameWorkTest1.Data
         public DbSet<DeviceSchedule> DeviceSchedules { get; set; }
         public DbSet<NumericalDeviceSchedule> NumericalDevices { get; set; }
         public DbSet<SchaduleDayOfWeek> SchaduleDayOfWeeks { get; set; }
-        protected override void ConfigureConventions(ModelConfigurationBuilder builder)
-        {
-            builder.Properties<TimeOnly>()
-                .HaveConversion<TimeOnlyConverter>()
-                .HaveColumnType("Time");
-        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
         {
             dbContextOptionsBuilder.UseSqlServer(@"Server=DESKTOP-D87V24D;Database=house;Trusted_Connection=True;encrypt=false");
         }
-    }
-    public class TimeOnlyConverter : ValueConverter<TimeOnly, DateTime>
-    {
-        public TimeOnlyConverter() : base(
-                d => DateTime.MinValue + d.ToTimeSpan(),
-                d => TimeOnly.FromDateTime(d)) { }
     }
 }
