@@ -8,7 +8,7 @@ namespace EntityFrameWorkTest1.Data.Entities
         public int Id { get; set; }
         public string Name { get; set; }
         [Required]
-        public TimeOnly Event { get; set; }
+        public DateTime Event { get; set; }
         public int UserId { get; set; } 
         public User User { get; set; }
         public int DeviceId { get; set; }

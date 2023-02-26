@@ -18,7 +18,7 @@ namespace EntityFrameWorkTest1.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
         {
-            dbContextOptionsBuilder.UseSqlServer(@"Server=DESKTOP-D87V24D;Database=house;Trusted_Connection=True;encrypt=false");
+            dbContextOptionsBuilder.UseSqlServer(@"Server=DESKTOP-V3RF4E3;Database=houseDB;Trusted_Connection=True;encrypt=false");
         }
     }
 }
