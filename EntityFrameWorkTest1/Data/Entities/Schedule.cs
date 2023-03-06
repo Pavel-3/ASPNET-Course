@@ -11,15 +11,6 @@ namespace EntityFrameWorkTest1.Data.Entities
         public DateTime Event { get; set; }
         public int UserId { get; set; } 
         public User User { get; set; }
-        public int DeviceId { get; set; }
-        public Device Device { get; set; }
         public List<SchaduleDayOfWeek> schaduleDayOfWeeks { get; set; }
-    }
-    public class SchaduleDayOfWeek
-    {
-        public int Id { get; set; }
-        public DayOfWeek DayOfWeek { get; set; }
-        public int ScaduleId { get; set; }
-        public Schedule Schedule { get; set; }
     }
 }

@@ -2,7 +2,8 @@
 {
     public class NuemericalFeedbackDevice : Device //setting the desired temperature and humidity in a room, electric kettle with temperature control ...
     {
-        public float Value { get; set; }
+        public float? Value { get; set; }
+        public List<NumericalDeviceSchedule> Schedules { get; set; }
     }
 
 }
